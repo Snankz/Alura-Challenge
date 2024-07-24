@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta htt="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-container">
+        <section class="header-container__misc"><h2>Alura</h2></section>
+    </header>
+
+    <main>
+    <section class="app-container">
+        <section class="app-container__input">
+            <textarea class="app-container__input__text" placeholder="Digite seu texto aqui"></textarea>
+            <section class="app-container__input__warning">
+                <p>!!!</p><p>Apenas letras minusculas e sem acentos</p>
+            </section>
+            <section class="app-container__input__buttons">
+                <button id="encoder">Criptografar</button>
+                <button id="decoder">Descriptografar</button>
+            </section>
+        </section>
+
+        <section class="app-container__output">
+            <textarea class="app-container__output__text" placeholder="123" readonly></textarea>
+            <section class="app-container__output__message">
+            <h4>Nenhuma mensagem encontrada</h4>
+            <p>Digite o texto que voce deseja criptografar ou descriptografar</p>
+            </section>
+            <button id="copy">Copiar</button>
+        </section>
+    </section>
+    </main>
+
+    <footer class="footer-container">
+        <section class="footer-container__text"><h3>Desenvolvido por Caique</h3></section>
+    </footer>
+
+</body>
+<script src="app.js"></script>
+</html>
