@@ -9,17 +9,17 @@
 </head>
 <body>
 
-    <header class="header-container">
-        <section class="header-container__misc"><h2>Alura</h2></section>
-    </header>
+ <header class="header-container">
+    <section class="header-container__misc"><h2><a href="index.html">Challenge Alura</a></h2></section>
+</header>
 
-    <main>
+<main>
     <section class="app-container">
         <section class="app-container__input">
-            <textarea class="app-container__input__text" placeholder="Digite seu texto aqui"></textarea>
-            <section class="app-container__input__warning">
-                <p>!!!</p><p>Apenas letras minusculas e sem acentos</p>
-            </section>
+            <textarea id="textinput" class="app-container__input__text" placeholder="DIGITE SEU TEXTO AQUI"></textarea>
+                <section class="app-container__input__warning">
+                    <p>!!!</p><p>Apenas letras minusculas e sem acentos</p>
+                </section>
             <section class="app-container__input__buttons">
                 <button id="encoder">Criptografar</button>
                 <button id="decoder">Descriptografar</button>
@@ -27,19 +27,28 @@
         </section>
 
         <section class="app-container__output">
-            <textarea class="app-container__output__text" placeholder="123" readonly></textarea>
-            <section class="app-container__output__message">
-            <h4>Nenhuma mensagem encontrada</h4>
-            <p>Digite o texto que voce deseja criptografar ou descriptografar</p>
+            
+            <textarea id="textoutput" class="app-container__output__text" placeholder="" readonly>
+            </textarea>
+            
+            <section class="app-container__output__msgandbtns">
+                <section class="app-container__output__message">
+                    <h4 id="outputmessage1">Nenhuma mensagem encontrada</h4>
+                    <p id="outputmessage2">Digite o texto que voce deseja criptografar ou descriptografar</p>
+                </section>
+
+                <section class="app-container__output__buttons">
+                    <button id="copy">Copiar</button>
+                    <button id="clear">Limpar</button>
+                 </section>
             </section>
-            <button id="copy">Copiar</button>
         </section>
     </section>
-    </main>
+</main>
 
-    <footer class="footer-container">
-        <section class="footer-container__text"><h3>Desenvolvido por Caique</h3></section>
-    </footer>
+<footer class="footer-container">
+    <section class="footer-container__text"><h3>Desenvolvido por Caique</h3></section>
+</footer>
 
 </body>
 <script src="app.js"></script>
