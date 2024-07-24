@@ -246,3 +246,7 @@ body {
         margin-bottom: 5px;
     }
 }
+
+.visibilityoff {
+    display: none;
+}
