@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Noto Serif", serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 97vw;
+    height: 95vh;
+    background-color: rgb(20, 20, 20);
+    color: whitesmoke;
+}
+
+.header-container {
+    text-align: center;
+    align-content: center;
+    background-color: black;
+    position: static;
+    left: 0px;
+    width: 100vw;
+    height: 8%;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 80vh;
+}
+
+.app-container__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+
+.app-container__input__warning {
+    display:flex;
+    margin-top: 20px;
+}
+
+.app-container__input__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.app-container__output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    resize: none;
+    position: relative;
+    width: 20%;
+    height: 90%;
+}
+
+.app-container__output__msgandbtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.app-container__output__message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    font-size: 1rem;
+}
+
+.app-container__output__buttons {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    bottom: -40%;
+}
+
+.app-container__output h2 {
+    font-size: 1.25rem;
+    color: whitesmoke;
+}
+
+.footer-container {
+    text-align: center;
+    font-size: 2rem;
+    align-content: center;
+    background-color: black;
+    position: static;
+    width: 100vw;
+    height: 8%;
+}
+
+@media (max-width: 800px) {
+
+    *{
+        font-size: 12px;
+    }
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .app-container__input__warning {
+        margin-top: 5px;
+    }
+    
+    .app-container__input__buttons {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.visibilityoff {
+    display: none;
+}

@@ -5,7 +5,9 @@
     <meta htt="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/buttons.css">
+    <link rel="stylesheet" href="./assets/styles/textareas.css">
 </head>
 <body>
 
@@ -16,14 +18,15 @@
 <main>
     <section class="app-container">
         <section class="app-container__input">
-            <textarea id="textinput" class="app-container__input__text" placeholder="DIGITE SEU TEXTO AQUI"></textarea>
-                <section class="app-container__input__warning">
-                    <p>!!!</p><p>Apenas letras minusculas e sem acentos</p>
+            <button id="paste-button">Colar</button>
+                <textarea id="textinput" class="app-container__input__text" placeholder="DIGITE SEU TEXTO AQUI"></textarea>
+                    <section class="app-container__input__warning">
+                        <p>!!!</p><p>Apenas letras minusculas e sem acentos</p>
+                    </section>
+                <section class="app-container__input__buttons">
+                    <button id="encoder">Criptografar</button>
+                    <button id="decoder">Descriptografar</button>
                 </section>
-            <section class="app-container__input__buttons">
-                <button id="encoder">Criptografar</button>
-                <button id="decoder">Descriptografar</button>
-            </section>
         </section>
 
         <section class="app-container__output">
@@ -39,7 +42,7 @@
 
                 <section class="app-container__output__buttons">
                     <button id="copy">Copiar</button>
-                    <button id="clear">Limpar</button>
+                    <button id="clear">Limpar campos</button>
                  </section>
             </section>
         </section>
@@ -51,5 +54,5 @@
 </footer>
 
 </body>
-<script src="app.js"></script>
+<script src="./scripts/app.js"></script>
 </html>

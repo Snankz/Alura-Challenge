@@ -1,0 +1,42 @@
+
+.app-container__input__text {
+    font-size: 2rem;
+    height: 50%;
+    width: 100%;
+    padding: 24px;
+    resize: none;
+    background-color: black;
+    color: whitesmoke;
+    border: 4px solid rgb(100, 20, 20);
+    border-radius: 32px;
+    transition: 500ms;
+}
+
+.app-container__input__text:focus {
+    border: 4px solid rgb(200, 20, 20);
+    box-shadow: 0px 0px 8px red;
+    transition: 500ms;
+    outline: none;
+}
+
+.app-container__output__text {
+    display:block;
+    font-size: 1.25rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    padding: 20px;
+    resize: none;
+    background-color: black;
+    color: rgb(20, 150, 20);
+    border: 4px solid rgb(20, 100, 20);
+    border-radius: 32px;
+    transition: 500ms;
+}
+
+.app-container__output__text:focus {
+    border: 4px solid rgb(20, 200, 20);
+    box-shadow: 0px 0px 5px yellowgreen;
+    transition: 100ms;
+    outline: none;
+}
