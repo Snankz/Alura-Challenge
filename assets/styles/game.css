@@ -27,7 +27,7 @@
     z-index: 1;
 }
 
-.mario {
+.amogus {
     user-select: none;
     width: 150px;
     position: absolute;
@@ -38,10 +38,10 @@
 }
 
 .jump {
-    animation: mario-jump 500ms ease-out;
+    animation: amogus-jump 500ms ease-out;
 }
 
-.pipe {
+.bad-amogus {
     position: absolute;
     bottom: 0;
     width: 100px;
@@ -56,7 +56,7 @@
     animation: clouds-move 15s linear infinite;
 }
 
-@keyframes pipe-move {
+@keyframes bad-amogus-move {
     from {
         right: -80px;
     }
@@ -66,7 +66,7 @@
     }
 }
 
-@keyframes mario-jump {
+@keyframes amogus-jump {
     0% {bottom: 0;}
     40%{bottom: 180px;}
     50% {bottom: 180px;}

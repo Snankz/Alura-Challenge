@@ -9,6 +9,8 @@ const button5 = document.getElementById("paste-button");
 var messageOut1 = document.getElementById("outputmessage1");
 var messageOut2 = document.getElementById("outputmessage2");
 
+
+// Codifica o texto e se nao houver texto volta a mostrar as mensagens na saida de texto
 function encodeText () {
 
     if (document.getElementById("textinput").value != 0) {
@@ -31,6 +33,7 @@ function encodeText () {
     }
 }
 
+// Descodifica o texto e se nao houver texto volta a mostrar as mensagens na saida de texto
 function decodeText () {
 
     if (document.getElementById("textinput").value != 0) {
@@ -95,58 +98,14 @@ button3.addEventListener("click", copyText);
 button4.addEventListener("click",() => { init(); redoTxt()});
 button5.addEventListener("click", pasteText);
 
+// Faz o botao fazer squish :D
+function buttonSquish(target) {
 
-function buttonSquish1() {
-
-    button1.classList.add("buttonsquish");
-
-    setTimeout(() => {
-
-        button1.classList.remove("buttonsquish");
-
-    } , 100);
-}
-
-function buttonSquish2() {
-
-    button2.classList.add("buttonsquish");
+    target.classList.add("buttonsquish");
 
     setTimeout(() => {
 
-        button2.classList.remove("buttonsquish");
-
-    } , 100);
-}
-
-function buttonSquish3() {
-
-    button3.classList.add("buttonsquish");
-
-    setTimeout(() => {
-
-        button3.classList.remove("buttonsquish");
-
-    } , 100);
-}
-
-function buttonSquish4() {
-
-    button4.classList.add("buttonsquish");
-
-    setTimeout(() => {
-
-        button4.classList.remove("buttonsquish");
-
-    } , 100);
-}
-
-function buttonSquish5() {
-
-    button5.classList.add("buttonsquish");
-
-    setTimeout(() => {
-
-        button5.classList.remove("buttonsquish");
+        target.classList.remove("buttonsquish");
 
     } , 100);
 }

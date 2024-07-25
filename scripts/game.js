@@ -1,30 +1,30 @@
 
-const mario = document.querySelector(".mario");
-const pipe = document.querySelector(".pipe");
+const amogus = document.querySelector(".amogus");
+const badAmogus = document.querySelector(".bad-amogus");
 const gameBoard = document.querySelector("#game-board1");
 const gameStart = document.querySelector("#start-game");
 const newGame = document.querySelector("#new-game");
 
 let gameOver = 0;
 
-let pipePosition;
-let marioPosition;
+let badAmogusPosition;
+let amogusPosition;
 
 const jumpDelay = 10;
 let lastJump = 0;
 
 
-// Faz o Mario pular
+// Faz o Amogus pular
 // Adiciona latencia a a frequencia de clicks para pular com Date.now
 const jump = () => {
 
     if ((lastJump + jumpDelay) < Date.now()) {
 
-        mario.classList.add("jump");
+        amogus.classList.add("jump");
 
         setTimeout(() => {
 
-            mario.classList.remove("jump");
+            amogus.classList.remove("jump");
             lastJump = Date.now()
 
         } , 500);
@@ -37,31 +37,31 @@ function playGame() {
 
     const loop = setInterval(() => {
 
-    pipePosition = pipe.offsetLeft;
-    marioPosition = +window.getComputedStyle(mario).bottom.replace("px","");
+    badAmogusPosition = badAmogus.offsetLeft;
+    amogusPosition = +window.getComputedStyle(amogus).bottom.replace("px","");
 
-    pipe.style.animation = "pipe-move 1.25s linear infinite";
+    badAmogus.style.animation = "bad-amogus-move 1.25s linear infinite";
 
-    if (pipePosition <= 333 && pipePosition > 175 && marioPosition < 80) {
+    if (badAmogusPosition <= 333 && badAmogusPosition > 175 && amogusPosition < 80) {
 
-        pipe.style.animation = "none";
-        pipe.style.left = `${pipePosition}px`;
+        badAmogus.style.animation = "none";
+        badAmogus.style.left = `${badAmogusPosition}px`;
 
-        mario.style.animation = "none";
-        mario.style.bottom = `${marioPosition}px`;
+        amogus.style.animation = "none";
+        amogus.style.bottom = `${amogusPosition}px`;
 
-        mario.src = "./assets/images/amogus-gameover.png";
-        mario.style.width = "100px";
-        mario.style.marginLeft = "25px";
-        mario.style.transform = "rotate(0deg)";
+        amogus.src = "./assets/images/amogus-gameover.png";
+        amogus.style.width = "100px";
+        amogus.style.marginLeft = "25px";
+        amogus.style.transform = "rotate(0deg)";
 
         gameOver = 1;
 
         clearInterval(loop);
     }
 
-    console.log(`Pipe is at: ${pipePosition}`);
-    console.log(`Mario is at: ${marioPosition}`);
+    console.log(`badAmogus is at: ${badAmogusPosition}`);
+    console.log(`amogus is at: ${amogusPosition}`);
     console.log(`Game over state: ${gameOver}`);
     return gameOver;
 
@@ -71,23 +71,23 @@ function playGame() {
 // Funcao que reseta os parametros dos elementos do jogo
 function startNewGame () {
 
-    console.log(`Pipe is at: ${pipePosition}`);
+    console.log(`badAmogus is at: ${badAmogusPosition}`);
 
 
     if (gameOver == 1) {
         
-        pipe.style.left = "";
+        badAmogus.style.left = "";
 
-        mario.src = "./assets/images/amogus.gif"
-        mario.style.width = "150px"
-        mario.style.marginLeft = "";
-        mario.style.bottom = "";
-        mario.style.animation ="";
-        mario.style.transform = "rotate(10deg)";
+        amogus.src = "./assets/images/amogus.gif"
+        amogus.style.width = "150px"
+        amogus.style.marginLeft = "";
+        amogus.style.bottom = "";
+        amogus.style.animation ="";
+        amogus.style.transform = "rotate(10deg)";
     
         gameOver = 0;
 
-        console.log(`Pipe is at: ${pipePosition}`);
+        console.log(`badAmogus is at: ${badAmogusPosition}`);
         console.log(`Game over state: ${gameOver}`);
         return gameOver;
 
