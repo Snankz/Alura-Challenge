@@ -60,6 +60,16 @@ body {
     margin-bottom: 20px;
 }
 
+.app-container__input__buttons2 {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 31%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .app-container__output {
     display: flex;
     flex-direction: column;

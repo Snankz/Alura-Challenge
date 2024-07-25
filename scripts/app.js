@@ -4,8 +4,9 @@ var txt3;
 const button1 = document.getElementById("encoder");
 const button2 = document.getElementById("decoder");
 const button3 = document.getElementById("copy");
-const button4 = document.getElementById("clear");
-const button5 = document.getElementById("paste-button");
+const button4 = document.getElementById("clearall");
+const button5 = document.getElementById("paste");
+const button6 = document.getElementById("clear");
 var messageOut1 = document.getElementById("outputmessage1");
 var messageOut2 = document.getElementById("outputmessage2");
 
@@ -22,7 +23,7 @@ function encodeText () {
     var criptedText = txt3.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
 
     txt2.value = criptedText;
-    console.log("O texto codificado e: ", criptedText);
+    // console.log("O texto codificado e: ", criptedText);
 
     } else if (document.getElementById("textinput").value == 0) {
 
@@ -36,6 +37,9 @@ function encodeText () {
 // Descodifica o texto e se nao houver texto volta a mostrar as mensagens na saida de texto
 function decodeText () {
 
+    clickEnc = false;
+    clickCounterEnc();
+
     if (document.getElementById("textinput").value != 0) {
 
     messageOut1.classList.add("visibilityoff");
@@ -45,7 +49,7 @@ function decodeText () {
     var decriptedText = txt3.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
 
     txt2.value = decriptedText;
-    console.log("O texto descodificado e: ", decriptedText);
+    // console.log("O texto descodificado e: ", decriptedText);
 
     } else if (document.getElementById("textinput").value == 0) {
 
@@ -56,17 +60,92 @@ function decodeText () {
     }
 }
 
+let clickEnc = true;
+// let clickDec = false;
+
+let intervalId1 = null;
+// let intervalId2 = null;
+
+function flipClick(value) {
+    return !value;
+}
+
+function clickCounterEnc() {
+
+    if (clickEnc == false ) {
+
+    clearInterval(intervalId1);
+    intervalId1 = null;
+
+    button1.classList.remove("buttonpressed");
+    button1.style.backgroundColor = "rgb(10, 10, 10)";
+
+
+    } else {
+
+       intervalId1 = setInterval(encodeText, 10);
+
+       button1.classList.add("buttonpressed");
+       button1.style.backgroundColor = "rgb(0, 50, 0)";
+
+    }
+
+    clickEnc = !clickEnc;
+    console.log(clickEnc);
+}
+
+clickCounterEnc();
+
+// function clickCounterDec() {
+
+//     if (clickDec == true || clickEnc == true) {
+
+//     clearInterval(intervalId2);
+//     intervalId2 = null;
+
+//     button2.classList.remove("buttonpressed");
+//     button2.style.backgroundColor = "rgb(10, 10, 10)";
+
+
+//     } else {
+
+//        intervalId2 = setInterval(decodeText, 10);
+
+//        button2.classList.add("buttonpressed");
+//        button2.style.backgroundColor = "rgb(0, 50, 0)";
+
+//     }
+
+//     clickDec = !clickDec;
+//     console.log(clickDec);
+// }
+
+
 // limpar caixa de texto
 function init() {
+
     txt1.value = "";
     txt2.value = "";
 }
 window.onload = init;
 
+const loopCheck = setInterval(() => {
+
+    if (txt1.value == 0) {
+
+        txt2.value = "";
+
+        messageOut1.classList.remove("visibilityoff");
+        messageOut2.classList.remove("visibilityoff");
+    } 
+
+}, 100)
+
 function redoTxt() {
 
     messageOut1.classList.remove("visibilityoff");
     messageOut2.classList.remove("visibilityoff");
+
 }
 
 function copyText() {
@@ -85,6 +164,11 @@ function copyText() {
         button3.innerText = "Copiar";
 
     } , 1000);
+
+    if (clickEnc == false) {
+        flipClick(clickEnc);
+        clickCounterEnc();
+    }
 }
 
 
@@ -92,11 +176,12 @@ function pasteText() {
     navigator.clipboard.readText().then(text => txt1.value = text);
 }
 
-button1.addEventListener("click", encodeText);
+button1.addEventListener("click", clickCounterEnc);
 button2.addEventListener("click", decodeText);
 button3.addEventListener("click", copyText);
 button4.addEventListener("click",() => { init(); redoTxt()});
 button5.addEventListener("click", pasteText);
+button6.addEventListener("click", init);
 
 // Faz o botao fazer squish :D
 function buttonSquish(target) {
@@ -107,5 +192,5 @@ function buttonSquish(target) {
 
         target.classList.remove("buttonsquish");
 
-    } , 100);
+    } , 80);
 }

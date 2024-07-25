@@ -18,20 +18,24 @@
 <main>
     <section class="app-container">
         <section class="app-container__input">
-            <button id="paste-button" onclick="buttonSquish(paste-button)">Colar</button>
-                <textarea id="textinput" class="app-container__input__text" placeholder="DIGITE SEU TEXTO AQUI"></textarea>
-                    <section class="app-container__input__warning">
-                        <p>!!!</p><p>Apenas letras minusculas e sem acentos</p>
+            <section class="app-container__input__buttons2">
+                <button id="paste" onclick="buttonSquish(button5)">Colar</button>
+                <button id="clear" onclick="buttonSquish(button6)">Limpar</button>
+            </section>
+
+                    <textarea id="textinput" class="app-container__input__text" placeholder="DIGITE SEU TEXTO AQUI"></textarea>
+                        <section class="app-container__input__warning">
+                            <p>!!!</p><p>Apenas letras minusculas e sem acentos</p>
+                        </section>
+                    <section class="app-container__input__buttons">
+                        <button id="encoder">Criptografar</button>
+                        <button id="decoder" onclick="buttonSquish(button2)">Descriptografar</button>
                     </section>
-                <section class="app-container__input__buttons">
-                    <button id="encoder" onclick="buttonSquish(encoder)">Criptografar</button>
-                    <button id="decoder" onclick="buttonSquish(decoder)">Descriptografar</button>
-                </section>
         </section>
 
         <section class="app-container__output">
             
-            <textarea id="textoutput" class="app-container__output__text" placeholder="" readonly><p></p>
+            <textarea id="textoutput" class="app-container__output__text" placeholder="" readonly>
             </textarea>
             
             <section class="app-container__output__msgandbtns">
@@ -41,8 +45,8 @@
                 </section>
 
                 <section class="app-container__output__buttons">
-                    <button id="copy" onclick="buttonSquish(copy)">Copiar</button>
-                    <button id="clear" onclick="buttonSquish(clear)">Limpar campos</button>
+                    <button id="copy" onclick="buttonSquish(button3)">Copiar</button>
+                    <button id="clearall" onclick="buttonSquish(button4)">Limpar campos</button>
                  </section>
             </section>
         </section>
