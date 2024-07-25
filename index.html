@@ -12,26 +12,26 @@
 <body>
 
  <header class="header-container">
-    <section class="header-container__misc"><h2><a href="index.html">Challenge Alura</a></h2></section>
+    <section class="header-container__misc"><h2>Challenge Codificador & Decodificador de Texto <a href="https://www.alura.com.br/" class="shiny" target="_blank"><br>Alura</a></h2></section>
 </header>
 
 <main>
     <section class="app-container">
         <section class="app-container__input">
-            <button id="paste-button">Colar</button>
+            <button id="paste-button" onclick="buttonSquish5()">Colar</button>
                 <textarea id="textinput" class="app-container__input__text" placeholder="DIGITE SEU TEXTO AQUI"></textarea>
                     <section class="app-container__input__warning">
                         <p>!!!</p><p>Apenas letras minusculas e sem acentos</p>
                     </section>
                 <section class="app-container__input__buttons">
-                    <button id="encoder">Criptografar</button>
-                    <button id="decoder">Descriptografar</button>
+                    <button id="encoder" onclick="buttonSquish1()">Criptografar</button>
+                    <button id="decoder" onclick="buttonSquish2()">Descriptografar</button>
                 </section>
         </section>
 
         <section class="app-container__output">
             
-            <textarea id="textoutput" class="app-container__output__text" placeholder="" readonly>
+            <textarea id="textoutput" class="app-container__output__text" placeholder="" readonly><p></p>
             </textarea>
             
             <section class="app-container__output__msgandbtns">
@@ -41,8 +41,8 @@
                 </section>
 
                 <section class="app-container__output__buttons">
-                    <button id="copy">Copiar</button>
-                    <button id="clear">Limpar campos</button>
+                    <button id="copy" onclick="buttonSquish3()">Copiar</button>
+                    <button id="clear" onclick="buttonSquish4()">Limpar campos</button>
                  </section>
             </section>
         </section>
@@ -50,7 +50,8 @@
 </main>
 
 <footer class="footer-container">
-    <section class="footer-container__text"><h3>Desenvolvido por Caique</h3></section>
+    <section><h3>Desenvolvido por <a href="game.html" class="footer-container__text">Caique</a></h3></section>
+    <a href="https://github.com/Snankz"><span><img src="./assets/images/github.png" class="gitimage"></span></a>
 </footer>
 
 </body>

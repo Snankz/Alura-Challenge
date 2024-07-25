@@ -78,6 +78,8 @@
     transition: 100ms;
 }
 
+
+
 #decoder {
     width: 47%;
     height: 64px;
@@ -95,4 +97,14 @@
     background-color: rgb(20, 20, 20);
     border-radius: 0px 24px 24px 24px;
     transition: 100ms;
+}
+
+@keyframes buttonsquish {
+    0% {transform: scale(100%);}
+    50% {transform: scale(90%);}
+    100% {transform: scale(100%);}
+}
+
+.buttonsquish {
+    animation: buttonsquish 50ms linear;
 }

@@ -2,6 +2,8 @@
 
 * {
     font-family: "Noto Serif", serif;
+    color: whitesmoke;
+    text-decoration: none;
     padding: 0;
     margin: 0;
 }
@@ -11,6 +13,7 @@ body {
     height: 95vh;
     background-color: rgb(20, 20, 20);
     color: whitesmoke;
+    overflow: hidden;
 }
 
 .header-container {
@@ -20,7 +23,8 @@ body {
     position: static;
     left: 0px;
     width: 100vw;
-    height: 8%;
+    height: 10%;
+    padding: 10px;
 }
 
 .app-container {
@@ -63,7 +67,7 @@ body {
     align-items: center;
     resize: none;
     position: relative;
-    width: 20%;
+    width: 25%;
     height: 90%;
 }
 
@@ -101,7 +105,10 @@ body {
 }
 
 .footer-container {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     font-size: 2rem;
     align-content: center;
     background-color: black;
@@ -110,14 +117,108 @@ body {
     height: 8%;
 }
 
-@media (max-width: 800px) {
+.footer-container__text {
+    animation: glow2 2s linear infinite;
+}
+
+.gitimage {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+}
+
+.visibilityoff {
+    display: none;
+}
+
+@keyframes glow {
+    0% {color: blue};
+    50% {color:aqua};
+    100% {color: blue}
+}
+
+@keyframes glow2 {
+    0% {color: lightsteelblue};
+    50% {color:lightcyan};
+    100% {color: lightsteelblue}
+}
+
+.shiny {
+    animation: glow 2s linear infinite;
+    font-size: 150%;
+}
+
+
+@media (max-width: 768px) {
 
     *{
         font-size: 12px;
     }
 
+    body {
+        height: 1174px;
+        overflow: visible;
+    }
+
+    .header-container h2 {
+        font-size: 24px;
+    }
+
     .app-container {
         flex-direction: column;
+        height: 1174px;
+    }
+
+    .app-container__input {
+        width: 60%;
+        height: 100%;
+    }
+
+    .app-container__input__warning {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .app-container__input__buttons {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .app-container__output {
+        width: 60%;
+        margin-top: -10%;
+    }
+
+    .footer-container {
+        bottom: auto;
+    }
+}
+
+
+@media (max-width: 375px) {
+
+    *{
+        font-size: 12px;
+    }
+
+    body {
+        height: 1715px;
+        overflow: visible;
+    }
+
+    .header-container h2 {
+        font-size: 24px;
+    }
+
+    .app-container {
+        flex-direction: column;
+        height: 1715px;
+    }
+
+    .app-container__input {
+        width: 60%;
+        height: 100%;
     }
 
     .app-container__input__warning {
@@ -128,8 +229,13 @@ body {
         margin-top: 5px;
         margin-bottom: 5px;
     }
-}
 
-.visibilityoff {
-    display: none;
+    .app-container__output {
+        width: 60%;
+        margin-top: -10%;
+    }
+
+    .footer-container {
+        bottom: auto;
+    }
 }
