@@ -19,6 +19,13 @@
     outline: none;
 }
 
+.app-container__input__text:hover {
+    border: 4px solid rgb(200, 20, 20);
+    box-shadow: 0px 0px 8px red;
+    transition: 500ms;
+    outline: none;
+}
+
 .app-container__output__text {
     display: block;
     font-size: 1.5rem;
@@ -36,6 +43,13 @@
 }
 
 .app-container__output__text:focus {
+    border: 4px solid rgb(20, 200, 20);
+    box-shadow: 0px 0px 5px yellowgreen;
+    transition: 100ms;
+    outline: none;
+}
+
+.app-container__output__text:hover {
     border: 4px solid rgb(20, 200, 20);
     box-shadow: 0px 0px 5px yellowgreen;
     transition: 100ms;

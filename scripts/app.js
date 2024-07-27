@@ -1,6 +1,9 @@
 var txt1 = document.getElementById("textinput");
 var txt2 = document.getElementById("textoutput");
 var txt3;
+
+const warningText = document.getElementById("warningMessage")
+
 const button1 = document.getElementById("encoder");
 const button2 = document.getElementById("decoder");
 const button3 = document.getElementById("copy");
@@ -88,7 +91,7 @@ function clickCounterEnc() {
        intervalId1 = setInterval(encodeText, 10);
 
        button1.classList.add("buttonpressed");
-       button1.style.backgroundColor = "rgb(50, 150, 50)";
+       button1.style.backgroundColor = "rgb(50, 200, 50)";
        button1.style.color = "black"
        button1.innerText = "Criptografando!";
     }
@@ -146,6 +149,9 @@ const loopCheck = setInterval(() => {
 
 function redoTxt() {
 
+    clickEnc = false;
+    clickCounterEnc();
+
     messageOut1.classList.remove("visibilityoff");
     messageOut2.classList.remove("visibilityoff");
 
@@ -189,6 +195,9 @@ button4.addEventListener("click",() => { init(); redoTxt()});
 button5.addEventListener("click", pasteText);
 button6.addEventListener("click", init);
 
+txt1.addEventListener("click", warningBlink);
+txt1.addEventListener("mouseover", warningBlink);
+
 // Faz o botao fazer squish :D
 function buttonSquish(target) {
 
@@ -199,4 +208,14 @@ function buttonSquish(target) {
         target.classList.remove("buttonsquish");
 
     } , 80);
+}
+
+function warningBlink() {
+
+    warningText.classList.add("textBlink");
+
+    setTimeout(() => {
+
+        warningText.classList.remove("textBlink");
+    }, 500)
 }

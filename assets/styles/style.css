@@ -159,6 +159,15 @@ body {
     font-size: 150%;
 }
 
+.textBlink {
+    animation: textBlinkAnimation 250ms linear infinite;
+}
+
+@keyframes textBlinkAnimation{
+    0% {color: whitesmoke; text-shadow: none};
+    50% {color: yellow; text-shadow: 0px 0px 2px yellow};
+    100% {color: whitesmoke; text-shadow: none};
+}
 
 @media (max-width: 768px) {
 
