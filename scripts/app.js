@@ -78,7 +78,9 @@ function clickCounterEnc() {
     intervalId1 = null;
 
     button1.classList.remove("buttonpressed");
-    button1.style.backgroundColor = "rgb(10, 10, 10)";
+    button1.style.backgroundColor = "";
+    button1.style.color = "whitesmoke"
+    button1.innerText = "Criptografar";
 
 
     } else {
@@ -86,8 +88,9 @@ function clickCounterEnc() {
        intervalId1 = setInterval(encodeText, 10);
 
        button1.classList.add("buttonpressed");
-       button1.style.backgroundColor = "rgb(0, 50, 0)";
-
+       button1.style.backgroundColor = "rgb(50, 150, 50)";
+       button1.style.color = "black"
+       button1.innerText = "Criptografando!";
     }
 
     clickEnc = !clickEnc;
@@ -158,11 +161,14 @@ function copyText() {
     navigator.clipboard.writeText(copyText.value);
 
     button3.innerText = "Copiado!";
+    button3.style.backgroundColor = "#c1c0c0";
+    button3.style.color = "black"
 
     setTimeout(() => {
 
         button3.innerText = "Copiar";
-
+        button3.style.backgroundColor ="rgb(10, 10, 10)";
+        button3.style.color = "whitesmoke"
     } , 1000);
 
     if (clickEnc == false) {

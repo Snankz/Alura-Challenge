@@ -8,6 +8,7 @@
     border-radius: 24px;
     background-color: rgb(10, 10, 10);
     transition: 0.4s;
+    z-index: 2;
 }
 
 #copy:hover {
@@ -21,10 +22,12 @@
 #paste {
     text-align: center;
     font-size: 1rem;
+    position: relative;
     width: 15%;
     height: 32px;
     top: 62%;
     right: 0px;
+    margin-right: 20px;
     color: whitesmoke;
     border-radius: 24px;
     background-color: rgb(10, 10, 10);
@@ -42,10 +45,11 @@
 #clear {
     text-align: center;
     font-size: 1rem;
+    position: relative;
     width: 15%;
     height: 32px;
     top: 62%;
-    right: 20%;
+    right: 0px;
     color: whitesmoke;
     border-radius: 24px;
     background-color: rgb(10, 10, 10);
@@ -69,6 +73,7 @@
     border-radius: 24px;
     background-color: rgb(10, 10, 10);
     transition: 0.4s;
+    z-index: 2;
 }
 
 #clearall:hover {
@@ -136,6 +141,7 @@
 }
 
 .buttonpressed {
-    transform: scale(90%);
+    transform: scale(95%);
     transition: 500ms;
+    border: 3px solid black;
 }
