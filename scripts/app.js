@@ -1,6 +1,6 @@
-var txt1 = document.getElementById("textinput");
-var txt2 = document.getElementById("textoutput");
-var txt3;
+var textInput = document.getElementById("textInput");
+var textOutput = document.getElementById("textOutput");
+var textMisc;
 
 const meuNome = document.getElementById("meuNome");
 const amogus1 = document.getElementById("amogus1")
@@ -10,11 +10,11 @@ const warningText = document.getElementById("warningMessage");
 const button1 = document.getElementById("encoder");
 const button2 = document.getElementById("decoder");
 const button3 = document.getElementById("copy");
-const button4 = document.getElementById("clearall");
+const button4 = document.getElementById("clearAll");
 const button5 = document.getElementById("paste");
 const button6 = document.getElementById("clear");
-var messageOut1 = document.getElementById("outputmessage1");
-var messageOut2 = document.getElementById("outputmessage2");
+var messageOut1 = document.getElementById("outputMessage1");
+var messageOut2 = document.getElementById("outputMessage2");
 
 console.log("Hello World!");
 
@@ -22,22 +22,22 @@ console.log("Hello World!");
 // Codifica o texto e se nao houver texto volta a mostrar as mensagens na saida de texto
 function encodeText () {
 
-    if (document.getElementById("textinput").value != 0) {
+    if (document.getElementById("textInput").value != 0) {
 
-    messageOut1.classList.add("visibilityoff");
-    messageOut2.classList.add("visibilityoff");
+    messageOut1.classList.add("visibilityOff");
+    messageOut2.classList.add("visibilityOff");
 
-    var txt3 = txt1.value
-    var criptedText = txt3.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+    var textMisc = textInput.value
+    var criptedText = textMisc.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
 
-    txt2.value = criptedText;
+    textOutput.value = criptedText;
 
-    } else if (document.getElementById("textinput").value == 0) {
+    } else if (document.getElementById("textInput").value == 0) {
 
-        messageOut1.classList.remove("visibilityoff");
-        messageOut2.classList.remove("visibilityoff");
+        messageOut1.classList.remove("visibilityOff");
+        messageOut2.classList.remove("visibilityOff");
 
-        document.getElementById("textoutput").value = "";
+        document.getElementById("textOutput").value = "";
     }
 }
 
@@ -47,29 +47,29 @@ function decodeText () {
     clickEnc = false;
     clickCounterEnc();
 
-    if (document.getElementById("textinput").value != 0) {
+    if (document.getElementById("textInput").value != 0) {
 
-    messageOut1.classList.add("visibilityoff");
-    messageOut2.classList.add("visibilityoff");
+    messageOut1.classList.add("visibilityOff");
+    messageOut2.classList.add("visibilityOff");
 
-    var txt3 = txt1.value;
-    var decriptedText = txt3.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+    var textMisc = textInput.value;
+    var decriptedText = textMisc.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
 
-    txt2.value = decriptedText;
+    textOutput.value = decriptedText;
 
-    } else if (document.getElementById("textinput").value == 0) {
+    } else if (document.getElementById("textInput").value == 0) {
 
-        messageOut1.classList.remove("visibilityoff");
-        messageOut2.classList.remove("visibilityoff");
+        messageOut1.classList.remove("visibilityOff");
+        messageOut2.classList.remove("visibilityOff");
 
-        document.getElementById("textoutput").value = "";
+        document.getElementById("textOutput").value = "";
     }
 }
 
 function toLowerCase() {
 
-    txt1.value = txt1.value.toLowerCase().replace(/ç/g, "c").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    return txt1.value;
+    textInput.value = textInput.value.toLowerCase().replace(/ç/g, "c").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return textInput.value;
 }
 
 let clickEnc = true;
@@ -89,10 +89,11 @@ function clickCounterEnc() {
     clearInterval(intervalId1);
     intervalId1 = null;
 
-    button1.classList.remove("buttonpressed");
+    button1.classList.remove("buttonPressed");
     button1.style.backgroundColor = "";
     button1.style.color = "whitesmoke"
     button1.innerText = "Criptografar";
+    button1.style.borderColor = ""
 
 
     } else {
@@ -102,12 +103,13 @@ function clickCounterEnc() {
         toLowerCase()
         encodeText();
         
-        }, 10);
+        }, 20);
 
-       button1.classList.add("buttonpressed");
+       button1.classList.add("buttonPressed");
        button1.style.backgroundColor = "rgb(30, 30, 30)";
        button1.style.color = "rgb(50, 200, 50)"
        button1.innerText = "Criptografar ligado!";
+       button1.style.borderColor = "rgb(50, 200, 50)"
     }
 
     clickEnc = !clickEnc;
@@ -118,8 +120,8 @@ clickCounterEnc();
 // limpar caixa de texto
 function init() {
 
-    txt1.value = "";
-    txt2.value = "";
+    textInput.value = "";
+    textOutput.value = "";
 }
 
 window.onload = init;
@@ -128,12 +130,12 @@ window.onload = init;
 
 const loopCheck = setInterval(() => {
 
-    if (txt1.value == 0) {
+    if (textInput.value == 0) {
 
-        txt2.value = "";
+        textOutput.value = "";
 
-        messageOut1.classList.remove("visibilityoff");
-        messageOut2.classList.remove("visibilityoff");
+        messageOut1.classList.remove("visibilityOff");
+        messageOut2.classList.remove("visibilityOff");
     } 
 
 }, 100)
@@ -143,14 +145,14 @@ function redoTxt() {
     clickEnc = false;
     clickCounterEnc();
 
-    messageOut1.classList.remove("visibilityoff");
-    messageOut2.classList.remove("visibilityoff");
+    messageOut1.classList.remove("visibilityOff");
+    messageOut2.classList.remove("visibilityOff");
 
 }
 
 function copyText() {
 
-  var copyText = document.getElementById("textoutput");
+  var copyText = document.getElementById("textOutput");
 
     copyText.select();
     copyText.setSelectionRange(0, 99999);
@@ -176,17 +178,17 @@ function copyText() {
 
 
 function pasteText() {
-    navigator.clipboard.readText().then(text => txt1.value = text);
+    navigator.clipboard.readText().then(text => textInput.value = text);
 }
 
 // Faz o botao fazer squish :D
 function buttonSquish(target) {
 
-    target.classList.add("buttonsquish");
+    target.classList.add("buttonSquish");
 
     setTimeout(() => {
 
-        target.classList.remove("buttonsquish");
+        target.classList.remove("buttonSquish");
 
     } , 80);
 }
@@ -219,7 +221,7 @@ button4.addEventListener("click",() => { init(); redoTxt()});
 button5.addEventListener("click", pasteText);
 button6.addEventListener("click", init);
 
-txt1.addEventListener("mouseover", warningBlink);
+textInput.addEventListener("mouseover", warningBlink);
 
 meuNome.addEventListener("mouseover", showAmogus);
-meuNome.addEventListener("mouseleave", hideAmogus)
+meuNome.addEventListener("mouseleave", hideAmogus);

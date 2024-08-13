@@ -2,6 +2,7 @@
 
 * {
     font-family: "Noto Serif", serif;
+    font-size: 1rem;
     color: whitesmoke;
     text-decoration: none;
     padding: 0;
@@ -18,14 +19,41 @@ body {
 }
 
 .header-container {
-    text-align: center;
-    align-content: center;
-    background-color: black;
-    position: static;
-    left: 0px;
+    display: flex;
+    flex-direction: row;
     width: 100vw;
     height: 10%;
+    background-color: black;
     padding: 10px;
+}
+
+.header-container--link {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    width: 15%;
+}
+
+.header-container--misc {
+    display: flex;
+    margin-left: 2%;
+    padding: auto;
+    width: 50%;
+    height: 100%;
+}
+
+.header-container--misc--text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+}
+
+.shiny {
+    display: flex;
+    animation: glow 2s linear infinite;
+    font-size: 2rem;
 }
 
 .app-container {
@@ -38,22 +66,23 @@ body {
     height: 80vh;
 }
 
-.app-container__input {
+.app-container--input {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     position: relative;
     width: 30%;
     height: 100%;
 }
 
-.app-container__input__warning {
+.app-container--input--warning {
     display:flex;
     margin-top: 20px;
+    font-size: 1rem;
 }
 
-.app-container__input__buttons {
+.app-container--input--buttons1 {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -61,7 +90,7 @@ body {
     margin-bottom: 20px;
 }
 
-.app-container__input__buttons2 {
+.app-container--input--buttons2 {
     display: flex;
     justify-content: flex-end;
     position: absolute;
@@ -70,7 +99,7 @@ body {
     margin: 20px;
 }
 
-.app-container__output {
+.app-container--output {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +110,7 @@ body {
     height: 90%;
 }
 
-.app-container__output__msgandbtns {
+.app-container--output--msgandbtns {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,7 +120,7 @@ body {
     position: absolute;
 }
 
-.app-container__output__message {
+.app-container--output--message {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,7 +131,7 @@ body {
     z-index: 2;
 }
 
-.app-container__output__buttons {
+.app-container--output--buttons {
     display: flex;
     justify-content: space-evenly;
     position: relative;
@@ -110,7 +139,7 @@ body {
     bottom: -40%;
 }
 
-.app-container__output h2 {
+.app-container--output h2 {
     font-size: 1.25rem;
     color: whitesmoke;
 }
@@ -128,11 +157,11 @@ body {
     height: 8%;
 }
 
-.footer-container__text {
+.footer-container--text {
     animation: glow2 2s linear infinite;
 }
 
-.footer-container__block {
+.footer-container--block {
     width: 10%;
     height: 100%;
     background-color: black;
@@ -151,7 +180,7 @@ body {
     }
 }
 
-.footer-container__block:hover {
+.footer-container--block:hover {
     animation: footerAnimation 1s linear;
 }
 
@@ -162,25 +191,20 @@ body {
     margin-left: 50px;
 }
 
-.visibilityoff {
+.visibilityOff {
     display: none;
 }
 
 @keyframes glow {
     0% {color: blue};
     50% {color:aqua};
-    100% {color: blue}
+    100% {color: blue};
 }
 
 @keyframes glow2 {
     0% {color: lightsteelblue};
     50% {color:lightcyan};
-    100% {color: lightsteelblue}
-}
-
-.shiny {
-    animation: glow 2s linear infinite;
-    font-size: 150%;
+    100% {color: lightsteelblue};
 }
 
 .textBlink {
@@ -228,23 +252,28 @@ body {
         height: 1174px;
     }
 
-    .app-container__input {
+    .app-container--input {
         width: 60%;
-        height: 100%;
+        height: 50%;
     }
 
-    .app-container__input__warning {
+    .app-container--input--warning {
         margin-top: 15px;
         margin-bottom: 15px;
     }
+
+    #warningMessage {
+        font-size: 1.25rem;
+    }
     
-    .app-container__input__buttons {
+    .app-container--input--buttons {
         margin-top: 5px;
         margin-bottom: 5px;
     }
 
-    .app-container__output {
+    .app-container--output {
         width: 60%;
+        height: 50%;
         margin-top: -10%;
     }
 
@@ -274,21 +303,21 @@ body {
         height: 1715px;
     }
 
-    .app-container__input {
+    .app-container--input {
         width: 60%;
         height: 100%;
     }
 
-    .app-container__input__warning {
+    .app-container--input--warning {
         margin-top: 5px;
     }
     
-    .app-container__input__buttons {
+    .app-container--input--buttons {
         margin-top: 5px;
         margin-bottom: 5px;
     }
 
-    .app-container__output {
+    .app-container--output {
         width: 60%;
         margin-top: -10%;
     }

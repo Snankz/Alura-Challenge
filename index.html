@@ -12,42 +12,43 @@
 <body>
 
  <header class="header-container">
-    <section class="header-container__misc"><h2>Challenge Codificador & Descodificador de Texto <a href="https://www.alura.com.br/" class="shiny" target="_blank"><br>Alura</a></h2></section>
+    <div class="header-container--link"><h1><a href="indexAlura.html">Descodificador da Alura (Em construção)</a></h1></div>
+    <div class="header-container--misc">
+        <h2 class="header-container--misc--text">Challenge Codificador & Descodificador de Texto <a href="https://www.alura.com.br/" class="shiny" target="_blank">Alura</a></h2>
+    </div>
 </header>
 
 <main>
     <section class="app-container">
-        <section class="app-container__input">
-            <section class="app-container__input__buttons2">
+        <section class="app-container--input">
+            <section class="app-container--input--buttons2">
                 <button id="paste" onclick="buttonSquish(button5)">Colar</button>
                 <button id="clear" onclick="buttonSquish(button6)">Limpar</button>
             </section>
 
-                    <textarea id="textinput" class="app-container__input__text" placeholder="DIGITE SEU TEXTO AQUI"></textarea>
-                        <section class="app-container__input__warning">
-                            <p id="warningMessage">→ Apenas letras minusculas e sem acentos ←</p>
-                        </section>
-                    <section class="app-container__input__buttons">
-                        <button id="encoder">Criptografar</button>
-                        <button id="decoder" onclick="buttonSquish(button2)">Descriptografar</button>
-                    </section>
+            <textarea id="textInput" class="app-container--input--text" placeholder="DIGITE SEU TEXTO AQUI"></textarea>
+                <section class="app-container--input--warning">
+                    <p id="warningMessage">→ Apenas letras minusculas e sem acentos ←</p>
+                </section>
+            <section class="app-container--input--buttons1">
+                <button id="encoder">Criptografar</button>
+                <button id="decoder" onclick="buttonSquish(button2)">Descriptografar</button>
+            </section>
         </section>
 
-        <section class="app-container__output">
+        <section class="app-container--output">            
+            <textarea id="textOutput" class="app-container--output--text" placeholder="" readonly></textarea>
             
-            <textarea id="textoutput" class="app-container__output__text" placeholder="" readonly>
-            </textarea>
-            
-            <section class="app-container__output__msgandbtns">
+            <section class="app-container--output--msgandbtns">
                 <img src="./assets/images/amogus.gif" id="amogus1" class="amogusBounce">
-                <section class="app-container__output__message">
-                    <h4 id="outputmessage1">Nenhuma mensagem encontrada</h4>
-                    <p id="outputmessage2">Digite o texto que voce deseja criptografar ou descriptografar</p>
+                <section class="app-container--output--message">
+                    <h4 id="outputMessage1">Nenhuma mensagem encontrada</h4>
+                    <p id="outputMessage2">Digite o texto que voce deseja criptografar ou descriptografar</p>
                 </section>
 
-                <section class="app-container__output__buttons">
+                <section class="app-container--output--buttons">
                     <button id="copy" onclick="buttonSquish(button3)">Copiar</button>
-                    <button id="clearall" onclick="buttonSquish(button4)">Limpar campos</button>
+                    <button id="clearAll" onclick="buttonSquish(button4)">Limpar campos</button>
                  </section>
             </section>
         </section>
@@ -55,8 +56,11 @@
 </main>
 
 <footer class="footer-container">
-    <section><h3>Desenvolvido por <a href="game.html" class="footer-container__text" id="meuNome">Caique</a></h3></section>
+    <section><h3>Desenvolvido por <a href="game.html" class="footer-container--text" id="meuNome">Caique</a></h3></section>
     <a href="https://github.com/Snankz"><span><img src="./assets/images/github.png" class="gitimage"></span></a>
+    <a href="https://www.linkedin.com/in/caique-dos-santos-938318162/"><span><img src="./assets/images/linkedin.png" class="gitimage"></span></a>
+    <a href="https://www.instagram.com/o_snek/"><span><img src="./assets/images/instagram.png" class="gitimage"></span></a>
+    <a href="https://m.twitch.tv/snankz/home"><span><img src="./assets/images/twitch.png" class="gitimage"></span></a>
 </footer>
 </body>
 </html>

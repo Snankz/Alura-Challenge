@@ -1,5 +1,5 @@
 
-.app-container__input__text {
+.app-container--input--text {
     font-size: 2rem;
     height: 50%;
     width: 100%;
@@ -9,24 +9,24 @@
     color: whitesmoke;
     border: 4px solid rgb(100, 20, 20);
     border-radius: 32px;
-    transition: 500ms;
+    transition: 250ms;
 }
 
-.app-container__input__text:focus {
+.app-container--input--text:focus {
     border: 4px solid rgb(200, 20, 20);
     box-shadow: 0px 0px 8px red;
-    transition: 500ms;
+    transition: 250ms;
     outline: none;
 }
 
-.app-container__input__text:hover {
+.app-container--input--text:hover {
     border: 4px solid rgb(200, 20, 20);
     box-shadow: 0px 0px 8px red;
-    transition: 500ms;
+    transition: 250ms;
     outline: none;
 }
 
-.app-container__output__text {
+.app-container--output--text {
     display: block;
     font-size: 1.5rem;
     width: 100%;
@@ -38,18 +38,18 @@
     color: rgb(20, 150, 20);
     border: 4px solid rgb(20, 100, 20);
     border-radius: 32px;
-    transition: 500ms;
+    transition: 250ms;
     z-index: 1;
 }
 
-.app-container__output__text:focus {
+.app-container--output--text:focus {
     border: 4px solid rgb(20, 200, 20);
     box-shadow: 0px 0px 5px yellowgreen;
     transition: 100ms;
     outline: none;
 }
 
-.app-container__output__text:hover {
+.app-container--output--text:hover {
     border: 4px solid rgb(20, 200, 20);
     box-shadow: 0px 0px 5px yellowgreen;
     transition: 100ms;
