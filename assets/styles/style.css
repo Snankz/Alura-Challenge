@@ -213,7 +213,7 @@ body {
 
 @keyframes textBlinkAnimation{
     0% {color: whitesmoke; text-shadow: none};
-    50% {color: yellow; text-shadow: 0px 0px 2px yellow};
+    50% {color: rgba(255, 255, 0, 0.666); text-shadow: 0px 0px 2px yellow};
     100% {color: whitesmoke; text-shadow: none};
 }
 

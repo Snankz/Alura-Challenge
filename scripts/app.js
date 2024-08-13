@@ -6,6 +6,7 @@ const meuNome = document.getElementById("meuNome");
 const amogus1 = document.getElementById("amogus1")
 
 const warningText = document.getElementById("warningMessage");
+const warningText1 = document.getElementById("warningMessage1");
 
 const button1 = document.getElementById("encoder");
 const button2 = document.getElementById("decoder");
@@ -203,6 +204,16 @@ function warningBlink() {
     }, 500)
 }
 
+function warningBlink1() {
+
+    warningText1.classList.add("textBlink");
+
+    setTimeout(() => {
+
+        warningText1.classList.remove("textBlink");
+    }, 500)
+}
+
 function showAmogus() {
 
     amogus1.classList.add("amogusBounceShow");
@@ -222,6 +233,7 @@ button5.addEventListener("click", pasteText);
 button6.addEventListener("click", init);
 
 textInput.addEventListener("mouseover", warningBlink);
+textInput.addEventListener("mouseover", warningBlink1);
 
 meuNome.addEventListener("mouseover", showAmogus);
 meuNome.addEventListener("mouseleave", hideAmogus);
